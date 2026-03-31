@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
+  --color-neon: #adff02;
+  --color-neon-dim: rgba(173, 255, 2, 0.2);
+  --color-dark: #0a0a0a;
+  --color-darker: #050505;
+  --color-panel: #111111;
+  --color-danger: #ff2a2a;
+}
+
+body {
+  background-color: var(--color-darker);
+  color: white;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for terminal vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon);
+}
+
+.terminal-border {
+  border: 1px solid #333;
+}
+
+.neon-border {
+  border: 1px solid var(--color-neon);
+  box-shadow: 0 0 10px var(--color-neon-dim);
+}
+
+.neon-text {
+  color: var(--color-neon);
+  text-shadow: 0 0 10px var(--color-neon-dim);
+}
+
